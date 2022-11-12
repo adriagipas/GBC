@@ -14,7 +14,7 @@
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
+ * along with adriagipas/GBC.  If not, see <https://www.gnu.org/licenses/>.
  */
 /*
  *  timers.c - Mòdul que implementa el temporitzador i el divisor.

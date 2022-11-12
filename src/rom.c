@@ -14,7 +14,7 @@
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
+ * along with adriagipas/GBC.  If not, see <https://www.gnu.org/licenses/>.
  */
 /*
  *  rom.c - Implementa funcions relacionades amb la ROM.
