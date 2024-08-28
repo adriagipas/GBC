@@ -1,5 +1,5 @@
 /*
- * Copyright 2011-2013,2015,2022 Adrià Giménez Pastor.
+ * Copyright 2011-2024 Adrià Giménez Pastor.
  *
  * This file is part of adriagipas/GBC.
  *
@@ -1463,26 +1463,55 @@ GBC_lcd_init_state (void)
 void
 GBC_lcd_init_gray_pal (void)
 {
+  /* Gris.
+  static const int C0= 0;
+  static const int C1= 10570;
+  static const int C2= 21140;
+  static const int C3= 32767;
+  */
+  /* GB - BGB
+  static const int C0= 0x1061;
+  static const int C1= 0x29A6;
+  static const int C2= 0x3AF1;
+  static const int C3= 0x67DB;
+  */
+  /* GB - V1
+  static const int C0= 0x08E2;
+  static const int C1= 0x1986;
+  static const int C2= 0x0AB1;
+  static const int C3= 0x0AF3;
+  */
+  /* GB - V2
+  static const int C0= 0x1D05;
+  static const int C1= 0x2567;
+  static const int C2= 0x21EB;
+  static const int C3= 0x0A0F;
+  */
+  // GB - https://thegamersalternative.static.app/olivedmgpalette
+  static const int C0= 0x2124;
+  static const int C1= 0x2D86;
+  static const int C2= 0x3608;
+  static const int C3= 0x26F1;
   
-  /* BG/WIN. */
-  _cpal.bg.v[0][0]= 32767;
-  _cpal.bg.v[0][1]= 21140;
-  _cpal.bg.v[0][2]= 10570;
-  _cpal.bg.v[0][3]= 0;
+  // BG/WIN.
+  _cpal.bg.v[0][0]= C3;
+  _cpal.bg.v[0][1]= C2;
+  _cpal.bg.v[0][2]= C1;
+  _cpal.bg.v[0][3]= C0;
   
-  /* OBJ0. */
-  _cpal.ob.v[0][0]= 32767;
-  _cpal.ob.v[0][1]= 21140;
-  _cpal.ob.v[0][2]= 10570;
-  _cpal.ob.v[0][3]= 0;
+  // OBJ0.
+  _cpal.ob.v[0][0]= C3;
+  _cpal.ob.v[0][1]= C2;
+  _cpal.ob.v[0][2]= C1;
+  _cpal.ob.v[0][3]= C0;
   
-  /* OBJ1. */
-  _cpal.ob.v[1][0]= 32767;
-  _cpal.ob.v[1][1]= 21140;
-  _cpal.ob.v[1][2]= 10570;
-  _cpal.ob.v[1][3]= 0;
+  // OBJ1.
+  _cpal.ob.v[1][0]= C3;
+  _cpal.ob.v[1][1]= C2;
+  _cpal.ob.v[1][2]= C1;
+  _cpal.ob.v[1][3]= C0;
   
-} /* end GBC_lcd_init_gray_pal */
+} // end GBC_lcd_init_gray_pal
 
 
 GBCu8
